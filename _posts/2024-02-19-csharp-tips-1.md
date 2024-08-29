@@ -4,7 +4,7 @@ title:  "C# - İpucu - 1"
 tags: csharp
 categories: csharp
 ---
-# Byte Veri T
+# Byte
 
 ```csharp
 byte sayi1 = 10;
