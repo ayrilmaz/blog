@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
+tags: hell world
+categories: general
 ---
 # Welcome
 **Hello world**, this is my first Jekyll blog post.
