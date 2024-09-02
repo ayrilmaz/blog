@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "VSCode dosya içi aramalar"
+title:  "VSCode - İpucu - 1"
 tags: vscode
 categories: vscode
 ---
