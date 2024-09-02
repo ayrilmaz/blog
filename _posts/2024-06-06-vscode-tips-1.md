@@ -4,11 +4,9 @@ title:  "VSCode - İpucu - 1"
 tags: vscode
 categories: vscode
 ---
+VSCode ile global bir arama yapıldığında, mevcut tüm dosyaların içinden geçer. Bu işlem ciddi bir zaman ve CPU tüketimi demektir. Özellikle Angular gibi node paketlerinin bolca bulunduğu projelerde can sıkıcı olabilir. Bunun önüne geçmek için arama yaparken bazı kısıtlamalar getirebiliriz.
 
-Vscode ile global bir arama yapıldığında ne kadar dosya varsa hepsininin içinden geçer. Bu da ciddi bir zaman ve CPU tüketmek demek. Özellikle Angular gibi node paketlerin bolca olduğu projelerde can sıkıcı olabilir. Bunun önüne geçmek için arama yaparken bazı kısıtlamalar getirebiliriz.
-
-Öncelikle yoksa kök dizine .vscode klasörünü ekleyelim. Daha sonra aynı klasöre settings.json dosyasını ekleyelim.
-
+Öncelikle, kök dizinde yoksa `.vscode` klasörünü ekleyelim. Ardından, aynı klasöre `settings.json` dosyasını ekleyelim.
 ``` json
 {
   "search.exclude": {
@@ -30,4 +28,4 @@ Vscode ile global bir arama yapıldığında ne kadar dosya varsa hepsininin iç
 }
 ```
 
-Proje klasör yapınıza göre uyarlama yapabilirsiniz.
+Bu ayarları, proje klasör yapınıza göre uyarlayabilirsiniz.

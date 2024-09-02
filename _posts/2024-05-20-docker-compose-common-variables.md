@@ -4,9 +4,7 @@ title:  "Docker Compose - Common Variables"
 tags: docker compose
 categories: docker
 ---
-
-Compose içersinde .env dosyası kullanmadan ortak değişkenler oluşturabileceğimiz bir alternatif olan common-variables örneği paylaşıyorum. Şurada köşede dursun.
-
+Compose içinde `.env` dosyası kullanmadan ortak değişkenler oluşturabileceğimiz bir alternatif olan `common-variables` örneğini paylaşıyorum. Şurada köşede dursun.
 ``` shell
 x-common-variables: &common-variables
   TZ: Europe/Istanbul

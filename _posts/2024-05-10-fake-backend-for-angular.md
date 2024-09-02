@@ -4,25 +4,17 @@ title:  "Angular için fake backend"
 tags: angular ng json
 categories: angular
 ---
-Angular ile kodlama yaparken yada test ederken sıkıkla bir api uç noktasına ihtiyacım oluyor. Bunun için pratik bir yöntem olan json-server kullanıyorum.
-
+Angular ile kodlama yaparken ya da test ederken sık sık bir API uç noktasına ihtiyaç duyabiliyorum. Bunun için pratik bir yöntem olan `json-server` kullanıyorum.
 # Kurulum
-
 ``` shell
 npm i -g json-server
 ```
-
 # Yapılandırma
-
 ``` shell
 mkdir data && cd data
 nano db.json
 ```
-
-data adlı bir klasör oluşturup içine de db.json dosyası ekleyeceğim. Nano dan çıkarken kayıt edeceğimden dolayı db.json dosyası oluşmuş olacak.
-
-Dosya içeriği ise;
-
+data adlı bir klasör oluşturup içine de db.json dosyasını ekleyeceğim. Nano'dan çıkarken dosyayı kaydettiğimde, db.json dosyası oluşmuş olacak. Dosya içeriği ise şu şekilde olacak:
 ``` json
 {
   "product": [
@@ -49,17 +41,12 @@ Dosya içeriği ise;
   ]
 }
 ```
-
 # Kullanma
-
-json dosyasının bulunduğu klasörde aşağıdaki komutunu çalıştırıyorum.
-
+JSON dosyasının bulunduğu klasörde aşağıdaki komutu çalıştırıyorum:
 ``` shell
 json-server --watch db.json
 ```
-
-Sonuç;
-
+Sonuç olarak, aşağıdaki gibi bir çıktı alacaksınız:
 ``` shell
 Press CTRL-C to stop
 Watching db.json...
@@ -76,16 +63,12 @@ Endpoints:
 http://localhost:3000/product
 http://localhost:3000/category
 ```
-
-Test için bir get isteği.
-
+Test için bir GET isteği örneği:
 ``` shell
 curl -X GET -H "Content-Type: application/json" -d '{
 }' http://localhost:3000/product
 ```
-
-Son olarak bir de post isteği.
-
+Son olarak bir de POST isteği örneği:
 ``` shell
 curl -X POST -H "Content-Type: application/json" -d '{
   "id": "3",
@@ -95,5 +78,4 @@ curl -X POST -H "Content-Type: application/json" -d '{
   "categoryId":"1"
 }' http://localhost:3000/product
 ```
-
-Post isteği sonucu tüm veri listelenecektir.
+POST isteği sonucu, tüm veriler listelenecektir.
